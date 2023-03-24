@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32H743xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;../myLib</IncludePath>
+              <IncludePath>../Core/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc;../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32H7xx/Include;../Drivers/CMSIS/Include;..\myLib\sdram</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -547,7 +547,7 @@
             <File>
               <FileName>sdram.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\myLib\sdram.c</FilePath>
+              <FilePath>..\myLib\sdram\sdram.c</FilePath>
             </File>
           </Files>
         </Group>

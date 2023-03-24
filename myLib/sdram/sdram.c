@@ -9,9 +9,9 @@ HAL_StatusTypeDef SDRAM_Send_Cmd(uint8_t bank, uint8_t cmd, uint8_t refresh, uin
 	FMC_SDRAM_CommandTypeDef Command;
 	
 	if(bank == 0) {
-		target_bank = FMC_SDRAM_CMD_TARGET_BANK1;
+		target_bank = FMC_SDRAM_CMD_TARGET_BANK1;			// start addr: 0xC0000000
 	} else if(bank == 1) {
-		target_bank = FMC_SDRAM_CMD_TARGET_BANK2;
+		target_bank = FMC_SDRAM_CMD_TARGET_BANK2;			// start addr: 0xD0000000
 	}
 	
 	Command.CommandMode = cmd;
@@ -44,7 +44,8 @@ void SDRAM_Initialization_Sequence(SDRAM_HandleTypeDef *hsdram)
 uint32_t FMC_SDRAM_test(void)
 {
 	for(uint32_t i = 0; i < EXT_SDRAM_SIZE/sizeof(uint32_t); i += 16*1024) {
-		SDRAMBuf[i] = i;
+		//SDRAMBuf[i] = i;
+		*((uint32_t*)EXT_SDRAM_ADDR + i) = i;
 	}
 	
 	for(uint32_t i = 0; i < EXT_SDRAM_SIZE/sizeof(uint32_t); i += 16*1024) {

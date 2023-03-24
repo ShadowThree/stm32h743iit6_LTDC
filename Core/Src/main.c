@@ -97,15 +97,6 @@ int main(void)
 	} else {
 		HAL_GPIO_WritePin(LED0_red_GPIO_Port, LED0_red_Pin, GPIO_PIN_RESET);
 	}
-	
-//	SDRAMBuf[0] = 0x12345678;
-//	SDRAMBuf[1] = 0x9ABCDEF0;
-//	if((*(uint32_t*)(EXT_SDRAM_ADDR) == 0x12345678) && (*(uint32_t*)(EXT_SDRAM_ADDR+sizeof(uint32_t)) == 0x9ABCDEF0)) {
-//	//if(*(uint16_t*)(EXT_SDRAM_ADDR) == 0x1234) {
-//		HAL_GPIO_WritePin(LED1_green_GPIO_Port, LED1_green_Pin, GPIO_PIN_RESET);
-//	} else {
-//		HAL_GPIO_WritePin(LED0_red_GPIO_Port, LED0_red_Pin, GPIO_PIN_RESET);
-//	}
   /* USER CODE END 2 */
 
   /* Infinite loop */
